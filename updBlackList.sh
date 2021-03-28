@@ -81,8 +81,8 @@
 #   These shoudld be created via EdgeOS BUI or CLI, and to have any
 #     effect must be assigned to one or more firewall rules
 #   Leave empty to not populate IPset netgroup
-fwGroupNets4="Nets4-BlackList"
-fwGroupNets6="Nets6-BlackList"
+fwGroupNets4="v4-blocks"
+fwGroupNets6="v6-blocks"
 #
 # Persistent data location (directory)
 dirUserData="/config/user-data"

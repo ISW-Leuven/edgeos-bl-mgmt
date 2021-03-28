@@ -1,13 +1,17 @@
-## Ubiquiti Networks EdgeRouter Firewall BlockList Management
--------------------------------------------------------------
-Automated management of network and host address blocklists, for use
-in EdgeRouter (EdgeOS) firewall rules.
+# ISW Leuven VyOS IP blocking
 
+Automated management of network and host address blocklists. This is a fork of [edgeos-bl-mgmt](https://github.com/WaterByWind/edgeos-bl-mgmt) which was orginaly developed for Ubiquiti EdgeOS.
 
-### Quick Start
+## Usage
+
+When using this script on our ISW routers you won't have to do anything. Our Ansible playbook automatically installs and configures this.
+However if you have no idea what ISW is or want to use this for your own VyOS router, there is a guide below.
+
+### Manual
+
 To get started, perform these steps on your EdgeRouter from a CLI configure prompt:  
-1. For IPv4:  `set firewall group network-group Nets4-BlackList description 'Blacklisted IPv4 Sources'`  
-2. For IPv6:  `set firewall group ipv6-network-group Nets6-BlackList description 'Blacklisted IPv6 Sources'`  
+1. For IPv4:  `set firewall group network-group v4-blocks description 'IPv4 Blocklist'`  
+2. For IPv6:  `set firewall group ipv6-network-group v6-blocks description 'IPv6 Blocklist'`  
 3. `cp updBlackList.sh /config/scripts/updBlackList.sh`  
 4. `cp fw-BlackList-URLs.txt /config/user-data/fw-BlackList-URLs.txt`  
 5. `cp loadBlackList.sh /config/scripts/post-config.d/loadBlackList.sh`  
@@ -16,26 +20,26 @@ To get started, perform these steps on your EdgeRouter from a CLI configure prom
 8. `sudo /config/scripts/updBlackList.sh`  
 
 You will also need to create a firewall rule to deny inbound source addresses
-that match this network-group `Nets4-BlackList`.  An example using
+that match this network-group `v4-blocks`.  An example using
 a zone-based firewall might look like:  
-1. `set firewall name wan-dmz-4 rule 1 source group network-group Nets4-BlackList`  
+1. `set firewall name wan-dmz-4 rule 1 source group network-group v4-blocks`  
 2. `set firewall name wan-dmz-4 rule 1 action drop`
 3. `set firewall name wan-dmz-4 rule 1 protocol all`
-4. `set firewall name wan-lan-4 rule 1 source group network-group Nets4-BlackList`  
+4. `set firewall name wan-lan-4 rule 1 source group network-group v4-blocks`  
 5. `set firewall name wan-lan-4 rule 1 action drop`  
 6. `set firewall name wan-lan-4 rule 1 protocol all`  
-7. `set firewall name wan-self-4 rule 1 source group network-group Nets4-BlackList`  
+7. `set firewall name wan-self-4 rule 1 source group network-group v4-blocks`  
 8. `set firewall name wan-self-4 rule 1 action drop`  
 9. `set firewall name wan-self-4 rule 1 protocol all`  
 
 Similar for IPv6:
-1. `set firewall ipv6-name wan-dmz-6 rule 1 source group ipv6-network-group Nets6-BlackList`  
+1. `set firewall ipv6-name wan-dmz-6 rule 1 source group ipv6-network-group v6-blocks`  
 2. `set firewall ipv6-name wan-dmz-6 rule 1 action drop`  
 3. `set firewall ipv6-name wan-dmz-6 rule 1 protocol all`  
-4. `set firewall ipv6-name wan-lan-6 rule 1 source group ipv6-network-group Nets6-BlackList`  
+4. `set firewall ipv6-name wan-lan-6 rule 1 source group ipv6-network-group v6-blocks`  
 5. `set firewall ipv6-name wan-lan-6 rule 1 action drop`  
 6. `set firewall ipv6-name wan-lan-6 rule 1 protocol all`  
-7. `set firewall ipv6-name wan-self-6 rule 1 source group ipv6-network-group Nets6-BlackList`  
+7. `set firewall ipv6-name wan-self-6 rule 1 source group ipv6-network-group v6-blocks`  
 8. `set firewall ipv6-name wan-self-6 rule 1 action drop`  
 9. `set firewall ipv6-name wan-self-6 rule 1 protocol all`  
 
