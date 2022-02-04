@@ -6,21 +6,30 @@ https://blocklist.greensnow.co/greensnow.txt
 
 # China
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_cn.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/cn/ipv6-aggregated.txt
 # Russia
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_ru.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/ru/ipv6-aggregated.txt
 # Iraq
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_iq.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/iq/ipv6-aggregated.txt
 # Iran
-https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_cr.netset
+https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_ir.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/ir/ipv6-aggregated.txt
 # Syria
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_sy.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/ir/ipv6-aggregated.txt
 # Afghanistan
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_af.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/af/ipv6-aggregated.txt
 # Saudi Arabia
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_sa.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/sa/ipv6-aggregated.txt
 # Kazakhstan
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_kz.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/kz/ipv6-aggregated.txt
 # North Korea
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_kp.netset
 # Vietnam 
 https://raw.githubusercontent.com/firehol/blocklist-ipsets/master/geolite2_country/country_vn.netset
+https://raw.githubusercontent.com/ipverse/rir-ip/master/country/vn/ipv6-aggregated.txt
